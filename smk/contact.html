@@ -10,21 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+       <!--font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
     <!-- Header Section -->
-    <header>
+  <header>
         <div class="logo">
             <img src="img/logo.jpeg" alt="SMK POLYSEAL">
             <h1>SMK POLYSEAL</h1>
         </div>
         <nav>
-            <ul>
+             <i class="fa-solid fa-bars" id="menubar" onclick="show()"></i>
+             <div class="menuitems">
+            <ul class="items">
+                <i class="fa-solid fa-xmark" id="close" onclick="hide()"></i>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+             </div>
         </nav>
     </header>
 
@@ -33,7 +39,7 @@
         <h2>Contact Us</h2>
         <p>If you have any questions or want to inquire about our sealing wads, please fill out the form below or reach us at:</p>
         <p>Email: smkpolyseals@gmail.com | Phone: +91 8072061606 / 8122223530</p>
-        <form action="mailto:smkpolyseals@gmail.com" method="POST">
+        <form onsubmit="sendEmail(); return false;">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
@@ -47,6 +53,6 @@
         <p>No.23,Pulikuththi village, Anjaneyarpuram,Morai-2,Avadi,Chennai-600055</p>
         <p>&copy; 2018 SMK POLYSEAL. All Rights Reserved.</p>
     </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
